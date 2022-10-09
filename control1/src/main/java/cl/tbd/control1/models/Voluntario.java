@@ -30,7 +30,7 @@ public class Voluntario {
     public void setCorreo(String correo){
         this.correo=correo;
     }
-    public void setPassword(String contrasenia){
+    public void setContrasenia(String contrasenia){
         this.contrasenia=contrasenia;
     }
 }
