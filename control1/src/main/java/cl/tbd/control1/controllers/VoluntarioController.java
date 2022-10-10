@@ -39,23 +39,16 @@ public class VoluntarioController {
         }
     }
     @PostMapping("")
-    public ResponseEntity<Voluntario> add(@RequestBody Voluntario voluntario){
-        List<Voluntario> voluntarios=voluntarioService.getAll();
+    public void add(@RequestBody Voluntario voluntario){
+        List<Voluntario> voluntarios =  voluntarioService.getAll();
         for (int i = 0; i < voluntarios.size(); i++) {
-            System.out.println(voluntario.getCorreo());
-            System.out.println(voluntarios.get(i).getCorreo());
-            System.out.println("\n");
             if(voluntarios.get(i).getCorreo().equals(voluntario.getCorreo())){
                 System.out.println("correo repetido");
-                return new ResponseEntity<Voluntario>(HttpStatus.NOT_FOUND);
-            
+                return;
             }
         }
-        System.out.println("correo no repetido");
         voluntarioService.crearVoluntario(voluntario);
-        return new ResponseEntity<Voluntario>(voluntario, HttpStatus.OK);
     }
-        
 
     @PutMapping("/{id}")
     public ResponseEntity<?> update(@RequestBody Voluntario voluntario,@PathVariable int id){
