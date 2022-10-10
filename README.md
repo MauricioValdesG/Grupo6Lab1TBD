@@ -6,8 +6,8 @@ Laboratorio 1 Taller de base de datos, Springboot &amp; vue.
 ● Frontend desarrollado con Vue
 
 Integrantes:
-Matias
-Matias
+Matias Vargas
+Matias Yañez
 Agustin Henriquez
 Rodolfo Unanue
 Mauricio Valdes
